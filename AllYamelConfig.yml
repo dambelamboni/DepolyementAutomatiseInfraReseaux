@@ -1,0 +1,108 @@
+#Pour DHCP_TP4.yml
+
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.65/27
+            gateway4: 192.168.1.94
+
+
+#Pour DNS_TP4.yml
+
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.1/26
+            gateway4: 192.168.1.62
+
+#Pour le DNS_SecondTP4.yml
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.97/28
+            gateway4: 192.168.1.110
+            
+
+#Pour R1_TP4.yml
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.94/27
+        eth2:
+            dhcp4: no
+            addresses:
+                - 192.168.1.117/30
+            routes:
+                - to: 192.168.1.0/26
+                  via: 192.168.1.118
+        eth3:
+            dhcp4: no
+            addresses:
+                - 192.168.1.113/30
+            routes:
+                - to: 192.168.1.96/28
+                  via: 192.168.1.114
+        
+                
+#Pour le R2_TP4.yml
+
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.110/28
+        eth2:
+            dhcp4: no
+            addresses:
+                - 192.168.1.114/30
+            routes:
+                - to: 192.168.1.64/27
+                  via: 192.168.1.113
+        eth3:
+            dhcp4: no
+            addresses:
+                - 192.168.1.121/30
+            routes:
+                - to: 192.168.1.0/26
+                  via: 192.168.1.122
+
+#Pour le R3_TP4.yml
+
+network:
+    version: 2
+    ethernets:
+        eth1:
+            dhcp4: no
+            addresses:
+                - 192.168.1.62/26
+        eth2:
+            dhcp4: no
+            addresses:
+                - 192.168.1.118/30
+            routes:
+                - to: 192.168.1.64/27
+                  via: 192.168.1.117
+        eth3:
+            dhcp4: no
+            addresses:
+                - 192.168.1.122/30
+            routes:
+                - to: 192.168.1.96/28
+                  via: 192.168.1.121
+            
+
+
